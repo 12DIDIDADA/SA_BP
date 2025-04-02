@@ -72,8 +72,5 @@ data_val['y_val'] = y_val
 data_val['y_val_pred'] = y_val_pred
 data_val.to_csv(r'/root/RF/RF_val.csv', index=False)
 
-y_all = rf_model.predict(x)
-R2_all = r2_score(y, y_all)
-MSE_all = mean_squared_error(y, y_all)
-MAE_all = mean_absolute_error(y, y_all)
+
 
