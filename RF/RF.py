@@ -76,10 +76,4 @@ y_all = rf_model.predict(x)
 R2_all = r2_score(y, y_all)
 MSE_all = mean_squared_error(y, y_all)
 MAE_all = mean_absolute_error(y, y_all)
-print("\n在全部数据集上的评估结果：")
-print(f"R²分数: {R2_all:.2f}, MSE分数: {MSE_all:.4f}, MAE分数: {MAE_all:.3f}")
-data_RF_all = pd.DataFrame()
-data_RF_all['y'] = y
-data_RF_all['y_all'] = y_all
 
-data_RF_all.to_csv(r'/root/RF/RF_all.csv', index=False)

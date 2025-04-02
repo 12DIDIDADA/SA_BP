@@ -52,28 +52,5 @@ print(f'R²: {r2_val:.2f}')
 print(f'MSE: {mse_val:.4f}')
 print(f'MAE: {mae_val:.3f}')
 
-y_train_pred = svm_model.predict(x_train)
-mse_train = mean_squared_error(y_train, y_train_pred)
-r2_train = r2_score(y_train, y_train_pred)
-mae_train = mean_absolute_error(y_train, y_train_pred)
 
-print(f'\nsvm模型的训练集评估结果:')
-print(f'R²: {r2_train:.2f}')
-print(f'MSE: {mse_train:.4f}')
-print(f'MAE: {mae_train:.3f}')
-data_val = pd.DataFrame()
-data_val['y_val'] = y_val
-data_val['y_val_pred'] = y_val_pred
-data_val.to_csv(r'/root/SVM/svm_val.csv', index=False)
 
-y_all = svm_model.predict(x)
-data_svm_all = pd.DataFrame()
-data_svm_all['y'] = y
-data_svm_all['y_all'] = y_all
-r2 = r2_score(y, y_all)
-mse = mean_squared_error(y, y_all)
-mae = mean_absolute_error(y, y_all)
-print(f'\nsvm模型的全部数据集评估结果:')
-print(f'R²: {r2:.2f}')
-print(f'MSE: {mse:.4f}')
-print(f'MAE: {mae:.3f}')

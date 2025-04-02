@@ -375,7 +375,7 @@ def fitness_function(params):
             # 写入数据
             writer.writerow([num_a, best_train_score, best_eval_score,val_score1,all_score1,time_use])
         # best_all_score = current_all_score
-        results_df_all1.to_csv('/root/return/提交版_all.csv', index=False,float_format='%.4f')
+        # results_df_all1.to_csv('/root/return/提交版_all.csv', index=False,float_format='%.4f')
         results_df_val1.to_csv('/root/return/提交版_val.csv', index=False,float_format='%.4f')
         results_df_test1.to_csv('/root/return/提交版_test.csv', index=False,float_format='%.4f')
 

@@ -194,16 +194,3 @@ print(f"测试集r2:{r_val}\nmae:{mae_val} \nmse:{mse_val}")
 df_val.to_csv(r'/root/BPNN/As_val.csv',index=False)
 
 
-# 进行预测
-model.eval()
-with torch.no_grad():  # 关闭梯度计算，用于推断
-    output = model(x_tensor_all)
-df_all = pd.DataFrame()
-df_all['As'] = y1
-df_all['预测'] = output.numpy()
-r_all = r2_score(df_all['As'],df_all['预测']).__round__(3)
-mae_all = mean_absolute_error(df_all['As'],df_all['预测']).__round__(3)
-mse_all = mean_squared_error(df_all['As'],df_all['预测']).__round__(4)
-print(f"所有的r2:{r_all}\nmae:{mae_all} \nmse:{mse_all}")
-
-df_all.to_csv(r'/root/BPNN/As_all.csv',index=False)
