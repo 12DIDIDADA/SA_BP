@@ -1,1 +1,9 @@
-#Optimized BP Neural Network for Spatial Prediction of Soil Arsenic in Karst AreasUsing Simulated Annealing Algorithm
+# 1. Prediction of As content in soil
+This is a collection of program scripts based on Python for predicting soil As, which contains four models: RF, SVM, BPNN, and SA_BPNN.
+# 2. Reproducibility
+This section presents information and steps for reproducing our work. Unfortunately, we are not able to share the dataset we employed.
+# 3. Create an environment.
+This experimental environment is deployed at https://www.suanlix.cn/user/login. It uses Python 3.11 on Ubuntu 20.04 and PyTorch 2.2.2 with CUDA 12.1. (Selecting different graphics cards may result in variations in running time.) For detailed information on deploying cloud servers, refer to (https://docs.suanlix.cn/kuaisurumen.html;). Users can install the necessary packages through conda or other methods if they choose deployment environments other than those mentioned above. All library functions used are free.
+# 4. Dataset location
+The data set should be located in /root/data/, or you can modify the writing in the source code to match your local location. (For example, if your local file is in D:\data.csv, then in the source file, data
+= pd.read_csv(r'/root/data/ms_pca_fanzhuan.csv', encoding="gbk") should be modified to data = pd.read_csv(r'D:\data.csv').)
