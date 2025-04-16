@@ -7,3 +7,5 @@ This experimental environment is deployed at https://www.suanlix.cn/user/login. 
 # 4. Dataset location
 The data set should be located in /root/data/, or you can modify the writing in the source code to match your local location. (For example, if your local file is in D:\data.csv, then in the source file, data
 = pd.read_csv(r'/root/data/ms_pca_fanzhuan.csv', encoding="gbk") should be modified to data = pd.read_csv(r'D:\data.csv')).The same principle applies to the output saved files.
+# 5. Implementation
+After creating the environment and saving the data in the correct location, you can complete the training of the models by running RF.py, SVM.py, BPNN.py, and SA_BPNN.py.
