@@ -1,5 +1,5 @@
 # 1. Prediction of As content in soil
-This is a collection of program scripts based on Python for predicting soil As, which contains four models: RF, SVM, BPNN, and SA_BPNN.
+This is a collection of program scripts based on Python for predicting soil As, which contains four models: RF, SVM, BPNN, and SA_BPNN(Among them, SA_BPNN.log is the deletion log of SA_BPNN.).
 # 2. Reproducibility
 This section presents information and steps for reproducing our work. Unfortunately, we are not able to share the dataset we employed.
 # 3. Create an environment.
